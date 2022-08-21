@@ -208,6 +208,8 @@ document.getElementById("save-invoice").addEventListener("click", async function
   let itemAmount = document.getElementById('grand-total');console.log(itemAmount.innerHTML);
   let gst = document.getElementById('taxation');console.log(gst.value);
 
+  let address = document.getElementById("address-ta")
+
   let invoiceObj = {
     items : items,
     invoiceNumber:invoiceNumber,
@@ -216,6 +218,7 @@ document.getElementById("save-invoice").addEventListener("click", async function
     dueDate : dueDate.value,
     amount : itemAmount.innerHTML,
     gst:gst.value,    
+    address:address.value,
 }
 
 console.log(invoiceObj);

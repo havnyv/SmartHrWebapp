@@ -121,7 +121,7 @@
 									<div class="col-sm-6 col-md-3">
 										<div class="form-group">
 											<label>Client Address</label>
-											<textarea class="form-control" rows="3"></textarea>
+											<textarea class="form-control" rows="3" id="address-ta"></textarea>
 										</div>
 									</div>
 									<div class="col-sm-6 col-md-3">

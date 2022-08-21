@@ -97,17 +97,7 @@
 								<label class="focus-label">To</label>
 							</div>
 						</div>
-						<div class="col-sm-6 col-md-3"> 
-							<div class="form-group form-focus select-focus">
-								<select class="select floating"> 
-									<option>Select Status</option>
-									<option>Pending</option>
-									<option>Paid</option>
-									<option>Partially Paid</option>
-								</select>
-								<label class="focus-label">Status</label>
-							</div>
-						</div>
+
 						<div class="col-sm-6 col-md-3">  
 							<a href="#" class="btn btn-success btn-block"> Search </a>  
 						</div>     
