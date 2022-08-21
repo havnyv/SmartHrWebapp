@@ -17,7 +17,7 @@
 	
 	<!-- Header Title -->
 	<div class="page-title-box">
-		<h3>SushTech</h3>
+		<h3>Sushmitha infotech</h3>
 	</div>
 	<!-- /Header Title -->
 	

@@ -52,7 +52,16 @@
 		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
 		<meta name="author" content="Dreamguys - Bootstrap Admin Template">
 		<meta name="robots" content="noindex, nofollow">
+
 		<title>Login - HRMS admin</title>
+
+
+		<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+.account-page{
+	background-image: linear-gradient(to bottom right, #eadfd566, #ca9c88ab);
+}
+</style>
 		
 		<!-- Favicon -->
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -86,7 +95,8 @@
 					
 					<div class="account-box">
 						<div class="account-wrapper">
-							<h3 class="account-title">Admin Login</h3>
+							<h3 class="account-title" style="font-size:30px;font-weight:bold;text-align:center;font-family: 'Lora', serif;">Sushmitha infotech</h3>
+							<h3 class="account-title">Login</h3>
 							<!-- Account Form -->
 							<form method="POST" enctype="multipart/form-data">
 								<div class="form-group">
