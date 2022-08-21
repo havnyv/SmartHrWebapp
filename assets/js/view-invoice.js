@@ -44,7 +44,9 @@ function displayInvoice(id) {
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <div class="btn-group btn-group-sm">
+                        <div class="btn-group btn-group-sm" onclick="print(()=>{
+                            window.print()
+                        })">
                             <button class="btn btn-white">PDF</button>
                             <button class="btn btn-white"><i class="fa fa-print fa-lg"></i> Print</button>
                         </div>
@@ -56,7 +58,7 @@ function displayInvoice(id) {
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body" id="card-body">
                             <div class="row">
                                 <div class="col-sm-6 m-b-20">
                                     <img src="assets/img/logo2.png" class="inv-logo" alt="">
