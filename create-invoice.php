@@ -162,27 +162,27 @@
 														<th> </th>
 													</tr>
 												</thead>
-												<tbody>
-												<tr>
-													<td>1</td>
+												<tr id="add-item-tr">
+													<td>Add:</td>
 													<td>
-														<input class="form-control" type="text" style="min-width:150px">
+														<input class="form-control" id="item-name" type="text" style="min-width:150px">
 													</td>
 													<td>
-														<input class="form-control" type="text" style="min-width:150px">
+														<input class="form-control"  id="item-desc" type="text" style="min-width:150px">
 													</td>
 													<td>
-														<input class="form-control" style="width:100px" type="text">
+														<input class="form-control" id="item-cost"  style="width:100px" type="text">
 													</td>
 													<td>
-														<input class="form-control" style="width:80px" type="text">
+														<input class="form-control"  id="item-qty" style="width:80px" type="text">
 													</td>
 													<td>
-														<input class="form-control" readonly="" style="width:120px" type="text">
+														<input class="form-control" id="item-amt" value=0  readonly="" style="width:120px" type="text">
 													</td>
-													<td><a href="javascript:void(0)" class="text-success font-18" title="Add"><i class="fa fa-plus"></i></a></td>
+													<td><a href="javascript:void(0)" id="add-btn" class="text-success font-18" title="Add"><i class="fa fa-plus"></i></a></td>
 												</tr>
-												<tr>
+												<tbody class="inputs-container">
+												<!-- <tr>
 													<td>2</td>
 													<td>
 														<input class="form-control" type="text" style="min-width:150px">
@@ -200,7 +200,7 @@
 														<input class="form-control" readonly="" style="width:120px" type="text">
 													</td>
 													<td><a href="javascript:void(0)" class="text-danger font-18" title="Remove"><i class="fa fa-trash-o"></i></a></td>
-												</tr>
+												</tr> -->
 												</tbody>
 											</table>
 										</div>
@@ -285,6 +285,10 @@
 		
 		<!-- Custom JS -->
 		<script src="assets/js/app.js"></script>
+
+
+		<!-- added js -->
+		<script src="assets/js/add-item.js"></script>
 		
     </body>
 </html>
