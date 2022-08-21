@@ -11,14 +11,12 @@ let itemQty = document.querySelector('#item-qty')
 let itemAmount = document.querySelector("#item-amt")
 
 itemCost.addEventListener('input',()=>{
-    console.log('hello');
     itemCost = document.querySelector('#item-cost')
     itemQty = document.querySelector('#item-qty')
     itemAmount = document.querySelector("#item-amt")
     itemAmount.value = Number(itemCost.value)*Number(itemQty.value)
 })
 itemQty.addEventListener('input',()=>{
-    console.log('hello');
     let itemCost = document.querySelector('#item-cost')
     let itemQty = document.querySelector('#item-qty')
     itemAmount = document.querySelector("#item-amt")
@@ -27,7 +25,6 @@ itemQty.addEventListener('input',()=>{
 
 
 
-console.log('second');
 // If user adds a note, add it to the localStorage
 addBtn.addEventListener("click", function(e) {
     console.log('clickkkkkkkkkkkkkkkkkkkkkkkkk');
@@ -37,7 +34,6 @@ addBtn.addEventListener("click", function(e) {
    let itemQty = document.querySelector('#item-qty')
    let itemAmount = Number(itemCost.value) * Number(itemQty.value)
 
-   console.log(itemAmount);
   let itemObj = {
       name:itemName.value,
       desc : itemDesc.value,
@@ -62,6 +58,7 @@ addBtn.addEventListener("click", function(e) {
     itemCost.value=''
     itemQty.value=''
     document.querySelector("#item-amt").value=0
+    updateInvoicePreview();
 showItems();
 });
 
@@ -69,7 +66,6 @@ showItems();
 
 // Function to show elements from localStorage
 function showItems() {
-    console.log('first firsts');
     let notes = localStorage.getItem("notes");
     if (notes == null) {
       notesObj = [];
@@ -142,5 +138,51 @@ function deleteNote(index) {
     
       notesObj.splice(index, 1);
       localStorage.setItem("notes", JSON.stringify(notesObj));
+      updateInvoicePreview()
       showItems();
     }
+
+
+
+
+
+
+
+
+
+/////////////////
+updateInvoicePreview();
+discountValue = document.getElementById('discount-rate')
+discountValue.addEventListener('input',updateInvoicePreview)
+
+
+function updateInvoicePreview(){
+    console.log('evvvvvvvvvvvvvvv ');
+    invoiceTotal = document.getElementById('invoice-total')
+    grandTotal =  document.getElementById('grand-total')
+    let notes = JSON.parse(localStorage.getItem("notes"))
+
+    // total 
+    totalSum =0 
+    notes = JSON.parse(localStorage.getItem("notes"));
+    notes.forEach(element => {
+        totalSum+=element.amt
+    });
+    invoiceTotal.innerText = totalSum
+
+    // tax    
+    taxation = document.getElementById('taxation')
+    taxValue = document.getElementById('tax-value')
+    console.log(taxation.value,'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+    taxValue.value = taxation.value
+    tax_per = Number(taxValue.value)/100
+    console.log(tax_per);
+
+    // discount
+    console.log(document.getElementById('discount-rate').value);
+    discountPer = document.getElementById('discount-rate').value /100 
+
+    // grand total
+    grandTotal.innerText = totalSum - totalSum*discountPer + totalSum * tax_per
+
+}

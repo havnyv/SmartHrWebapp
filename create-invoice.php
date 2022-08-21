@@ -110,11 +110,11 @@
 									<div class="col-sm-6 col-md-3">
 										<div class="form-group">
 											<label>Tax</label>
-											<select class="select">
-												<option>Select Tax</option>
-												<option>VAT</option>
-												<option>GST</option>
-												<option>No Tax</option>
+											<select class="select" id="taxation">
+												<!-- <option   value="select-op">Select Tax</option> -->
+												<option  value="18">GST-18%</option>
+												<option  value="12.36">VAT-12.36%</option>
+												<option  value="0">No Tax-0%</option>
 											</select>
 										</div>
 									</div>
@@ -213,12 +213,12 @@
 														<td></td>
 														<td></td>
 														<td class="text-right">Total</td>
-														<td style="text-align: right; padding-right: 30px;width: 230px">0</td>
+														<td id="invoice-total" style="text-align: right; padding-right: 30px;width: 230px">0</td>
 													</tr>
 													<tr>
 														<td colspan="5" class="text-right">Tax</td>
 														<td style="text-align: right; padding-right: 30px;width: 230px">
-															<input class="form-control text-right" value="0" readonly="" type="text">
+															<input class="form-control text-right" id="tax-value"  value="0" readonly="" type="text">
 														</td>
 													</tr>
 													<tr>
@@ -226,14 +226,14 @@
 															Discount %
 														</td>
 														<td style="text-align: right; padding-right: 30px;width: 230px">
-															<input class="form-control text-right" type="text">
+															<input id="discount-rate"  class="form-control text-right" type="text">
 														</td>
 													</tr>
 													<tr>
 														<td colspan="5" style="text-align: right; font-weight: bold">
 															Grand Total
 														</td>
-														<td style="text-align: right; padding-right: 30px; font-weight: bold; font-size: 16px;width: 230px">
+														<td id="grand-total"  style="text-align: right; padding-right: 30px; font-weight: bold; font-size: 16px;width: 230px">
 															$ 0.00
 														</td>
 													</tr>
@@ -289,6 +289,7 @@
 
 		<!-- added js -->
 		<script src="assets/js/add-item.js"></script>
+		<script src="assets/js/save-invoice.js"></script>
 		
     </body>
 </html>
