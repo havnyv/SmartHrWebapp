@@ -252,7 +252,7 @@
 								</div>
 								<div class="submit-section">
 									<button class="btn btn-primary submit-btn m-r-10">Save & Send</button>
-									<button class="btn btn-primary submit-btn">Save</button>
+									<button class="btn btn-primary submit-btn" id="save-invoice">Save</button>
 								</div>
 							</form>
 						</div>

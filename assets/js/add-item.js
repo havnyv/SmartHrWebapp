@@ -43,14 +43,14 @@ addBtn.addEventListener("click", function(e) {
   }
 
 //   let addTxt = document.querySelector(".item-name").value
-  let notes = localStorage.getItem("notes");
+  let notes = localStorage.getItem("storageItems");
   if (notes == null) {
     notesObj = [];
   } else {
     notesObj = JSON.parse(notes);
   }
   notesObj.push(itemObj);
-  localStorage.setItem("notes", JSON.stringify(notesObj));
+  localStorage.setItem("storageItems", JSON.stringify(notesObj));
 //   addTxt.value = "";
 //   console.log(notesObj);
     itemName.value=''
@@ -66,7 +66,7 @@ showItems();
 
 // Function to show elements from localStorage
 function showItems() {
-    let notes = localStorage.getItem("notes");
+    let notes = localStorage.getItem("storageItems");
     if (notes == null) {
       notesObj = [];
     } else {
@@ -129,7 +129,7 @@ function showItems() {
 function deleteNote(index) {
     //   console.log("I am deleting", index);
     
-      let notes = localStorage.getItem("notes");
+      let notes = localStorage.getItem("storageItems");
       if (notes == null) {
         notesObj = [];
       } else {
@@ -160,11 +160,11 @@ function updateInvoicePreview(){
     console.log('evvvvvvvvvvvvvvv ');
     invoiceTotal = document.getElementById('invoice-total')
     grandTotal =  document.getElementById('grand-total')
-    let notes = JSON.parse(localStorage.getItem("notes"))
+    let notes = JSON.parse(localStorage.getItem("storageItems"))
 
     // total 
     totalSum =0 
-    notes = JSON.parse(localStorage.getItem("notes"));
+    notes = JSON.parse(localStorage.getItem("storageItems"));
     notes.forEach(element => {
         totalSum+=element.amt
     });
@@ -186,3 +186,52 @@ function updateInvoicePreview(){
     grandTotal.innerText = totalSum - totalSum*discountPer + totalSum * tax_per
 
 }
+
+
+
+
+
+
+//////////////////
+// If user adds a note, add it to the localStorage
+saveBtn = document.getElementById('save-invoice')
+saveBtn.addEventListener("click", function(e) {
+  console.log('clickkkkkkkkkkkkkkkkkkkkkkkkk');
+  let invoiceNumber = document.querySelector("#item-name")
+  let client = document.querySelector("#item-desc")
+  let createdDate = document.querySelector('#item-cost')
+ let dueDate = document.querySelector('#item-qty')
+ let amount = Number(itemCost.value) * Number(itemQty.value)
+ let status = 12
+ let action = 122 
+
+
+let itemObj = {
+    invoiceNumber:itemName.value,
+    client : itemDesc.value,
+    createdDate:itemCost.value,
+    dueDate : itemQty.value,
+    amount : itemAmount,
+    status: itemAmount,
+    action:itemAmount ,
+}
+
+//   let addTxt = document.querySelector(".item-name").value
+let notes = localStorage.getItem("invoices");
+if (notes == null) {
+  invoiceObj = [];
+} else {
+  invoiceObj = JSON.parse(notes);
+}
+notesObj.push(itemObj);
+localStorage.setItem("invoices", JSON.stringify(invoiceObj));
+//   addTxt.value = "";
+//   console.log(notesObj);
+  itemName.value=''
+  itemDesc.value=''
+  itemCost.value=''
+  itemQty.value=''
+  document.querySelector("#item-amt").value=0
+  updateInvoicePreview();
+showItems();
+});
