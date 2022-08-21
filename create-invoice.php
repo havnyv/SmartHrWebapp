@@ -83,10 +83,10 @@
 									<div class="col-sm-6 col-md-3">
 										<div class="form-group">
 											<label>Client <span class="text-danger">*</span></label>
-											<select class="select">
-												<option>Please Select</option>
-												<option selected="">Barry Cuda</option>
-												<option>Tressa Wexler</option>
+											<select id="select-client" class="select">
+												<option >Please Select</option>
+												<option value="Barry Cuda" selected="">Barry Cuda</option>
+												<option value="Tressa Wexler">Tressa Wexler</option>
 											</select>
 										</div>
 									</div>
@@ -134,7 +134,7 @@
 										<div class="form-group">
 											<label>Invoice date <span class="text-danger">*</span></label>
 											<div class="cal-icon">
-												<input class="form-control datetimepicker" type="text">
+												<input id="created-date" class="form-control datetimepicker" type="text">
 											</div>
 										</div>
 									</div>
@@ -142,7 +142,7 @@
 										<div class="form-group">
 											<label>Due Date <span class="text-danger">*</span></label>
 											<div class="cal-icon">
-												<input class="form-control datetimepicker" type="text">
+												<input id="due-date"  class="form-control datetimepicker" type="text">
 											</div>
 										</div>
 									</div>
@@ -252,7 +252,7 @@
 								</div>
 								<div class="submit-section">
 									<button class="btn btn-primary submit-btn m-r-10">Save & Send</button>
-									<button class="btn btn-primary submit-btn" id="save-invoice">Save</button>
+								<a href="/Smarthr-hr-payroll-project-employee-management-System/invoices.php">	<button class="btn btn-primary submit-btn" id="save-invoice">Save</button> </a>
 								</div>
 							</form>
 						</div>
@@ -289,7 +289,6 @@
 
 		<!-- added js -->
 		<script src="assets/js/add-item.js"></script>
-		<script src="assets/js/save-invoice.js"></script>
 		
     </body>
 </html>
