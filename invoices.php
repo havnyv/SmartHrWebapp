@@ -78,31 +78,7 @@
 						</div>
 					</div>
 					<!-- /Page Header -->
-					
-					<!-- Search Filter -->
-					<div class="row filter-row">
-						<div class="col-sm-6 col-md-3">  
-							<div class="form-group form-focus">
-								<div class="cal-icon">
-									<input class="form-control floating datetimepicker" type="text">
-								</div>
-								<label class="focus-label">From</label>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-3">  
-							<div class="form-group form-focus">
-								<div class="cal-icon">
-									<input class="form-control floating datetimepicker" type="text">
-								</div>
-								<label class="focus-label">To</label>
-							</div>
-						</div>
 
-						<div class="col-sm-6 col-md-3">  
-							<a href="#" class="btn btn-success btn-block"> Search </a>  
-						</div>     
-                    </div>
-					<!-- /Search Filter -->
 					
 					<div class="row">
 						<div class="col-md-12">

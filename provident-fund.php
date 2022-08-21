@@ -90,11 +90,10 @@
 											<th>Provident Fund Type</th>
 											<th>Employee Share</th>
 											<th>Organization Share</th>
-											<th>Status</th>
 											<th class="text-right">Actions</th>
 										</tr>
 									</thead>
-									<tbody>
+									<tbody id="pf-body">
 										<tr>
 											<td>
 												<h2 class="table-avatar">
@@ -105,22 +104,10 @@
 											<td>Percentage of Basic Salary</td>
 											<td>2%</td>
 											<td>2%</td>
-											<td>
-												<div class="dropdown action-label">
-													<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-														<i class="fa fa-dot-circle-o text-danger"></i> Pending
-													</a>
-													<div class="dropdown-menu dropdown-menu-right">
-														<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Pending</a>
-														<a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Approved</a>
-													</div>
-												</div>
-											</td>
 											<td class="text-right">
 												<div class="dropdown dropdown-action">
 													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
 													<div class="dropdown-menu dropdown-menu-right">
-														<a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_pf"><i class="fa fa-pencil m-r-5"></i> Edit</a>
 														<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_pf"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
 													</div>
 												</div>
@@ -171,6 +158,7 @@
 
 		<!-- Custom JS -->
 		<script src="assets/js/app.js"></script>
+		<script src="assets/js/add-pdf2.js"></script>
 		
     </body>
 </html>

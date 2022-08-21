@@ -173,7 +173,6 @@ function updateInvoicePreview() {
   // tax    
   taxation = document.getElementById('taxation')
   taxValue = document.getElementById('tax-value')
-  console.log(taxation.value, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
   taxValue.value = taxation.value
   tax_per = Number(taxValue.value) / 100
   console.log(tax_per);

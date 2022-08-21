@@ -13,16 +13,13 @@
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Employee Name</label>
-												<select class="form-control select">
-													<option value="3">John Doe (FT-0001)</option>
-													<option value="23">Richard Miles (FT-0002)</option>
-												</select>
+												<input class="form-control" type="text" id="emp-name">
 											</div>
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Provident Fund Type</label>
-												 <select class="form-control select">
+												 <select class="form-control select" id="pf-type">
 													<option value="Fixed Amount" selected="">Fixed Amount</option>
 													<option value="Percentage of Basic Salary">Percentage of Basic Salary</option>
 												</select>
@@ -34,13 +31,13 @@
 													<div class="col-sm-6">
 														<div class="form-group">
 															<label>Employee Share (Amount)</label>
-															<input class="form-control" type="text">
+															<input class="form-control" type="text" id="emp-share">
 														</div>
 													</div>
 													<div class="col-sm-6">
 														<div class="form-group">
 															<label>Organization Share (Amount)</label>
-															<input class="form-control" type="text">
+															<input class="form-control" type="text" id="org-share">
 														</div>
 													</div>
 												</div>
@@ -72,10 +69,12 @@
 										</div>
 									</div>
 									<div class="submit-section">
-										<button class="btn btn-primary submit-btn">Submit</button>
-									</div>
+										<button  id="submit-pf"  class="btn btn-primary submit-btn " data-dismiss="modal" aria-label="Close">Submit</button>
+									</div> 
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
+
+				<script src="assets/js/add-pf.js"></script>
