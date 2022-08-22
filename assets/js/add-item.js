@@ -127,7 +127,6 @@ function showItems() {
 
 // Function to delete a note
 function deleteNote(index) {
-  //   console.log("I am deleting", index);
 
   let notes = localStorage.getItem("storageItems");
   if (notes == null) {
@@ -157,7 +156,6 @@ discountValue.addEventListener('input', updateInvoicePreview)
 
 
 function updateInvoicePreview() {
-  console.log('evvvvvvvvvvvvvvv ');
   invoiceTotal = document.getElementById('invoice-total')
   grandTotal = document.getElementById('grand-total')
   let notes = JSON.parse(localStorage.getItem("storageItems"))
@@ -175,10 +173,8 @@ function updateInvoicePreview() {
   taxValue = document.getElementById('tax-value')
   taxValue.value = taxation.value
   tax_per = Number(taxValue.value) / 100
-  console.log(tax_per);
 
   // discount
-  console.log(document.getElementById('discount-rate').value);
   discountPer = document.getElementById('discount-rate').value / 100
 
   // grand total
@@ -197,7 +193,6 @@ function updateInvoicePreview() {
 // If user adds a note, add it to the localStorage
 document.getElementById("save-invoice").addEventListener("click", async function(event){
   event.preventDefault()
-  console.log('clicked saveeeee')
   let items = localStorage.getItem("storageItems");
   items=  JSON.parse(items) 
   let clientName = document.getElementById('select-client');console.log('clinent name ',clientName.value)
@@ -220,7 +215,6 @@ document.getElementById("save-invoice").addEventListener("click", async function
     address:address.value,
 }
 
-console.log(invoiceObj);
 
 let LsInvoices = localStorage.getItem("LsInvoices");
 if (LsInvoices == null) {

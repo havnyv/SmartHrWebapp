@@ -13,40 +13,28 @@
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Project Name</label>
-												<input class="form-control" type="text">
+												<input class="form-control" type="text" id="pro-name">
 											</div>
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Client</label>
-												<select name="client" class="select">
-												<option>Select Clients</option>
-												<?php 
-													$sql2 = "SELECT * from clients";
-													$query2 = $dbh -> prepare($sql2);
-													$query2->execute();
-													$result2=$query2->fetchAll(PDO::FETCH_OBJ);
-													foreach($result2 as $row)
-													{          
-														?>  
-													<option value="<?php echo htmlentities($row->FirstName)." ".htmlentities($row->LastName); ?>">
-													<?php echo htmlentities($row->FirstName)." ".htmlentities($row->LastName); ?></option>
-													<?php } ?> 
-												</select>
-											</div>
+												<input class="form-control" type="text" id="pro-client">
+
+											</div> 
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Start Date</label>
-												<input name="start_date" class="form-control" type="date">
+												<input name="start_date" class="form-control" type="date" id="prost-dt">
 											</div>
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>End Date</label>
-												<input name="end_date" class="form-control" type="date">
+												<input name="end_date" class="form-control" type="date" id="pro-deadline">
 											</div>
 										</div>
 									</div>
@@ -69,10 +57,10 @@
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Priority</label>
-												<select class="select">
-													<option>High</option>
-													<option>Medium</option>
-													<option>Low</option>
+												<select class="select" id="pro-prio">
+													<option value="100">High</option>
+													<option value="60">Medium</option>
+													<option value="40">Low</option>
 												</select>
 											</div>
 										</div>
@@ -81,7 +69,7 @@
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Add Project Leader</label>
-												<input class="form-control" type="text">
+												<input class="form-control" type="text" id="pro-leader">
 											</div>
 										</div>
 										<div class="col-sm-6">
@@ -125,13 +113,9 @@
 									</div>
 									<div class="form-group">
 										<label>Description</label>
-										<textarea rows="4" class="form-control summernote" placeholder="Enter your message here"></textarea>
+										<textarea id="pro-desc"  rows="4" class="form-control summernote" placeholder="Enter your message here"></textarea>
 									</div>
-									<div class="form-group">
-										<label>Upload Files</label>
-										<input class="form-control" type="file">
-									</div>
-									<div class="submit-section">
+									<div class="submit-section" id="submit-pro">
 										<button class="btn btn-primary submit-btn">Submit</button>
 									</div>
 								</form>
@@ -139,3 +123,6 @@
 						</div>
 					</div>
 				</div>
+
+
+				<script src="assets/js/add-project.js"></script>

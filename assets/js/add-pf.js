@@ -1,4 +1,3 @@
-console.log("PPPPPPPPPPPPPPFFFFFFFFFFFFFF");
 
 // If user adds a note, add it to the localStorage
 let submitPf = document.getElementById("submit-pf");
@@ -21,7 +20,6 @@ submitPf.addEventListener("click", function() {
   localStorage.setItem("LsPf", JSON.stringify(notesObj));
   window.location.replace("./provident-fund.php");
   window.refresh()
-//   console.log(notesObj);
 });
 
 
